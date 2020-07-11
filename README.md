@@ -28,7 +28,28 @@ Create your own cocktail selecting the ingredients
 
 ## Data structure
 
-Classes and methods definition
+- root/
+  - index.html
+  - searchByCocktail.html
+  - searchBySpirit.html
+  - searchByIngredient.html
+  - aboutUs.html
+  - signin.html
+  - login.html
+  - css/
+    - indexStyle.css
+    - search.css
+    - aboutUs.css
+    - enter.css
+  - js/
+    - index.js
+    - search.js
+    - signup.js
+    - login.js
+    - theCocktailDB.js
+  - assets/
+    - img/
+    - fonts/
 
 ## APIs
 
