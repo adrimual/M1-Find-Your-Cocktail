@@ -41,7 +41,7 @@ Create your own cocktail selecting the ingredients
     - search.css
     - aboutUs.css
     - enter.css
-  - js/
+  - scripts/
     - index.js
     - search.js
     - signup.js
