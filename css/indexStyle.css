@@ -1,0 +1,127 @@
+@font-face {
+    font-family: NeonDisco;
+    src: url(/assets/fonts/NeonDisco.ttf);
+}
+@font-face {
+    font-family: "Neon Glow";
+    src: url(/assets/fonts/Neon\ Glow.ttf);
+}
+@font-face {
+    font-family: "Clubbed to Life";
+    src: url(/assets/fonts/Clubbed\ to\ Life.otf);
+}
+html{
+    box-sizing: border-box;
+    font-family: "Clubbed to Life";
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li {
+    background-color: white;
+    position: relative;
+    float: left;    
+}
+#enter {
+    background-color: white;
+    padding-top: 0.3rem;
+}
+#menu ul a {
+    display: block;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#menu ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background:white;
+    padding: 0;
+}
+#menu ul ul li {
+    float: none;
+    width: 150px;
+}
+#menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+}
+#menu ul li:hover > ul {
+    display:block;
+}
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+#enter a{
+    color: black;
+    text-decoration: none;
+    padding-right: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+#centeredTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3.3rem;
+    padding-right: 4.8rem;
+}
+#titleH2 {
+    padding-top: 4rem;
+    font-size: 2rem;
+}
+h1 {
+    font-family: NeonDisco;
+    font-size: 3rem;
+    margin: 0;
+}
+#FYC_Options{
+    display: block;
+    box-sizing: inherit;
+    align-items: center;
+}
+#FYC_Motto {
+    padding-left: 0.7rem;
+    font-family: "Neon Glow";
+    color: #FFFF28;
+    background-color: black;
+}
+.displayContainer{
+    padding: 0.8rem 1.1rem;
+}
+#linkContainer {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    font-size: 1.6rem
+}
+.searchBy{
+    padding-top:1rem;
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.searchBy p {
+    padding: 0 2rem;
+}
+#randomCocktailContainer{
+    margin-top: 1rem;
+}
