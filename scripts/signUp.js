@@ -42,16 +42,8 @@ class Signup {
         const password = this.passwordInput.value;
         const repeatPassword = this.repeatPasswordInput.value;
 
-        // function createUser(name, surname, email, password){
-        //     const userObj = {
-        //         name,
-        //         surname,
-        //         email,
-        //         password
-        //     }
-        //     return userObj;
-        // }
-        const newUser = createUser(name, surname,  email, password);
+
+        const newUser = new User(name, surname,  email, password);
         /*
          * Pseudocodigo
          * 
