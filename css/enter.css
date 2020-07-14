@@ -109,15 +109,25 @@ h1 {
 
 main {
     height: 300px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
 }
 
 .signup {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: space-around;
+    max-width: 360px;
     margin-top: 85px;
     text-align: center;
+    margin: 0;
+    padding-left: 3.1rem;
+    padding-right: 3.1rem;
+
+}
+
+.signup form {
+    margin: 0
 }
 
 .form-wrapper {
@@ -152,7 +162,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.7rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px #feb1b1;
+    box-shadow: 0 0 10px #fffb00;
     align-items: center;
 }
 
