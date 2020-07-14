@@ -4,71 +4,165 @@
 class Signup {
     constructor() {
         this.nameInput = document.querySelector("#name");
-        this.surnameInput = document.querySelector("#surname");
+        this.surnameInput = document.querySelector("#surname")
         this.emailInput = document.querySelector("#email");
         this.passwordInput = document.querySelector("#password");
         this.repeatPasswordInput = document.querySelector("#repeat-password");
         this.buttonInput = document.querySelector("#signup-button");
-        this.errorWrapper = document.querySelector(".message-container");
+        this.errorsWrapper = document.querySelector(".message-container");
+
     }
-    //input email gestionar cambios
+    // gestionar cambios del input "email"
     handleEmailInput = (event) => {
         const email = event.target.value;
 
-        console.log('email', email);
+        // validar el texto del input email
+        validator.validateValidEmail(email);
 
-        //validar texto del input email
+        const errors = validator.getErrors();
+
+        // si el nombre del email es valido
+        if (!errors.invalidEmailError) {
+            // comprueba si el email es unico
+            validator.validateUniqueEmail(email);
+        }
+
+        this.setErrorMessages();
+
+        // comprobar si hay errores, si no hay errores activa el boton Sign up (disabled = false)
+        this.checkButton();
     }
-    //input password gestionar cambios
+
+    // gestionar cambios del input "password"
     handlePasswordInput = (event) => {
         const password = event.target.value;
+        const passwordRepeat = this.repeatPasswordInput.value;
 
-        console.log('password', password);
-        //validar texto del input email
-    }
-    //input repeat-password gestionar cambios
-    handleRepeatPassowrdInput = (event) => {
-        const repeatPassword = event.target.value;
 
-        console.log('repeatPassword', repeatPassword);
-        //validar texto del input email
+        // validar el texto del input password
+        validator.validatePassword(password);
+        validator.validatePasswordRepeat(password, passwordRepeat);
+
+        this.setErrorMessages();
+
+        // comprobar si hay errores, si no hay errores activa el boton Sign up (disabled = false)
+        this.checkButton();
     }
-    //gestionar envio de datos (submit)
+
+    // gestionar cambios del input "repeat-password"
+    handleRepeatPasswordInput = (event) => {
+        const passwordRepeat = event.target.value;
+        const password = this.passwordInput.value;
+
+        // validar el texto del input password
+        // validar el texto del input repeatPassword
+        validator.validatePassword(password);
+        validator.validatePasswordRepeat(password, passwordRepeat);
+
+        this.setErrorMessages();
+
+        // comprobar si hay errores, si no hay errores activa el boton Sign up (disabled = false)
+        this.checkButton();
+    }
+
+    // gestionar el envio de los datos (submit)
     saveData = (event) => {
-        //recoger todos los valores de input
+        // Cuando el evento ocurre, cancelalo y no recargue la pagina
+        event.preventDefault();
+        // recoger los valores de cada input
         const name = this.nameInput.value;
         const surname = this.surnameInput.value;
         const email = this.emailInput.value;
         const password = this.passwordInput.value;
         const repeatPassword = this.repeatPasswordInput.value;
 
+        const newUser = new User(name, surname, email, password);
 
-        const newUser = new User(name, surname,  email, password);
-        /*
-         * Pseudocodigo
-         * 
-         *   //guardar el nuevo usuario en la base de datos
-         * database.createNewUser(newUser);
-         */
+        db.saveNewUser(newUser);
 
-         //vaciar formulario
-        this.nameInput.value ="";
-        this.surnameInput.value ="";
-        this.emailInput.value ="";
-        this.passwordInput.value ="";
-        this.repeatPasswordInput.value ="";
+
+
+        // vaciar el form
+        this.nameInput.value = "";
+        this.surnameInput.value = "";
+        this.emailInput.value = "";
+        this.passwordInput.value = "";
+        this.repeatPasswordInput.value = "";
+
+        this.showSuccessMessage();
+        this.removeMessages();
+
+        // reiniciar los errores del `validator`
+        validator.resetValidator();
+        // desactivar el botón Sign Up de nuevo
+        this.buttonInput.disabled = true;
     }
-    //registrar las funciones para cada input/campo
 
+    // registarar funciones para cada input/campo
     addListeners = () => {
-        //escucha a los cambios de texto
+        // escucha para los cambios de texto
         this.emailInput.addEventListener("input", this.handleEmailInput);
         this.passwordInput.addEventListener("input", this.handlePasswordInput);
-        this.repeatPasswordInput.addEventListener("input", this.repeatPasswordInput);
+        this.repeatPasswordInput.addEventListener("input", this.handleRepeatPasswordInput);
         this.buttonInput.addEventListener("click", this.saveData);
     }
+
+    showSuccessMessage = () => {
+
+        this.errorsWrapper.innerHTML = "";
+        const errorsObj = validator.getErrors();
+        // convertir el objeto a un array de strings
+        const errorsStringsArr = Object.values(errorsObj);
+        if (errorsStringsArr.length > 1) {
+            return;
+        }
+        const successMessageP = document.createElement('p');
+        successMessageP.innerHTML = "The account has been successfully created";
+        this.errorsWrapper.appendChild(successMessageP);
+
+    }
+
+
+    // activar o desactivar el botón de sign-up
+    checkButton = () => {
+        const errorsObj = validator.getErrors();
+        const errorsArr = Object.values(errorsObj);
+
+
+        if (errorsArr.length > 0) {
+            this.buttonInput.disabled = true;
+        } else {
+            this.buttonInput.disabled = false;
+        }
+    }
+
+    removeMessages = () => {
+        setTimeout(() => {
+            this.errorsWrapper.innerHTML = "";
+        }, 2000)
+    }
+
+
+    setErrorMessages = () => {
+        // vacia los errores para que no se sumen
+        this.errorsWrapper.innerHTML = "";
+
+        const errorsObj = validator.getErrors();
+
+        // convertir el objeto a un array de strings
+        const errorsStringsArr = Object.values(errorsObj);
+
+        errorsStringsArr.forEach((errorStr) => {
+            const errorMessageP = document.createElement('p');
+            errorMessageP.innerHTML = errorStr;
+
+            this.errorsWrapper.appendChild(errorMessageP);
+        })
+
+    }
 }
-//crear una nueva instancia del Signup (objeto)
+
+// crear una nueva instanica del Signup (objeto)
 const signup = new Signup();
 
 window.addEventListener("load", signup.addListeners);

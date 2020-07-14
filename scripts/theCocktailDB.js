@@ -1,30 +1,38 @@
-'use strict';
+'use strict'
+
 class Database {
-    //recuperar los usuarios 
+    // recuperar los usuarios - el array
     getAllUsers = () => {
-        //recuperamos el string
+        // recuperar el string
         const usersStr = localStorage.getItem("users");
-        //convertir el string en un array
+        // convertir el string a un array
         const usersArr = JSON.parse(usersStr);
-        //si no hay usuarios devuelve array vacio
+
+        // si todavia no hay usuarios, devuelve un array vacio
         if (usersArr === null) {
             return [];
         } else {
             return usersArr;
         }
-    }
-    saveNewUser = (newUser) => {
-        //recuperar el array de usuarios de localStorage
-        const userArr = this.getAllUsers();
-        //acutalizar arr
-        userArr.push(newUser);
 
-        //convertir array en string
+    }
+
+    saveNewUser = (newUser) => {
+
+        // recuperar el array de los usuarios del localStorage
+        const usersArr = this.getAllUsers();
+
+        // actualizar el array de usuarios
+        usersArr.push(newUser);
+
+        // convertir el array a un string
         const usersStr = JSON.stringify(usersArr);
 
-        //almacenarlo en localStorage
+        // almacenar lo de nuevo
         localStorage.setItem("users", usersStr);
     }
 }
 
 const db = new Database();
+
+console.log('db', db)
