@@ -65,6 +65,6 @@ Create your own cocktail selecting the ingredients
 
 [Gihub Repo URL](https://github.com/adrimual/M1-Find-Your-Cocktail)
 
-### Slides
+### Prezi
 
-link to slides.com
+https://prezi.com/yapvn_ykkd2m/?utm_campaign=share&utm_medium=copy
