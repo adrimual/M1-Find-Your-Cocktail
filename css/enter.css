@@ -117,7 +117,6 @@ main {
 .signup {
     display: flex;
     flex-direction: column;
-    max-width: 360px;
     margin-top: 85px;
     text-align: center;
     margin: 0;
@@ -147,6 +146,8 @@ main {
 
 .message-container {
     width: 100%;
+    padding-top: 1rem;
+    padding-left: 2.3rem;
     max-width: 800px;
     display: flex;
     justify-content: space-evenly;
