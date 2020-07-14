@@ -29,7 +29,7 @@ class Signup {
 
         this.setErrorMessages();
 
-        // comprobar si hay errores, si no hay errores activa el boton Sign up (disabled = false)
+        
         this.checkButton();
     }
 
@@ -90,8 +90,6 @@ class Signup {
         this.repeatPasswordInput.value = "";
 
         this.showSuccessMessage();
-        this.removeMessages();
-
         // reiniciar los errores del `validator`
         validator.resetValidator();
         // desactivar el botón Sign Up de nuevo
@@ -127,29 +125,15 @@ class Signup {
     checkButton = () => {
         const errorsObj = validator.getErrors();
         const errorsArr = Object.values(errorsObj);
-
-
         if (errorsArr.length > 0) {
             this.buttonInput.disabled = true;
         } else {
             this.buttonInput.disabled = false;
         }
     }
-
-    removeMessages = () => {
-        setTimeout(() => {
-            this.errorsWrapper.innerHTML = "";
-        }, 2000)
-    }
-
-
     setErrorMessages = () => {
-        // vacia los errores para que no se sumen
         this.errorsWrapper.innerHTML = "";
-
         const errorsObj = validator.getErrors();
-
-        // convertir el objeto a un array de strings
         const errorsStringsArr = Object.values(errorsObj);
 
         errorsStringsArr.forEach((errorStr) => {
@@ -158,8 +142,8 @@ class Signup {
 
             this.errorsWrapper.appendChild(errorMessageP);
         })
-
     }
+    
 }
 
 // crear una nueva instanica del Signup (objeto)

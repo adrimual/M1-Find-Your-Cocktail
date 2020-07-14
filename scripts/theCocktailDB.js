@@ -16,7 +16,6 @@ class Database {
         }
 
     }
-
     saveNewUser = (newUser) => {
 
         // recuperar el array de los usuarios del localStorage
@@ -28,7 +27,7 @@ class Database {
         // convertir el array a un string
         const usersStr = JSON.stringify(usersArr);
 
-        // almacenar lo de nuevo
+        // almacenarlo de nuevo
         localStorage.setItem("users", usersStr);
     }
 }
