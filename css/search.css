@@ -128,7 +128,6 @@ h1 b {
     font-family: NeonDisco;
     font-size: 5rem;
     margin: 0;
-
 }
 
 #b-header {
@@ -189,4 +188,16 @@ p b {
     border-radius: 5px;
     position: relative;
     cursor: pointer;
+}
+
+.bg-color {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+}
+
+#browse-title {
+    font-family: "Neon Glow";
+    font-size: 3rem;
+    color: yellow;
+    text-decoration: underline;
 }
