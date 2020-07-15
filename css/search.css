@@ -79,13 +79,17 @@ body {
 #menu ul li:hover>ul {
     display: block;
 }
-#menu #a1:hover, #a2:hover, #a3:hover{
+
+#menu #a1:hover,
+#a2:hover,
+#a3:hover {
     max-width: 85%;
-    width:100%;
+    width: 100%;
     height: 2.8rem;
     background-color: aquamarine;
     border-radius: 15px
 }
+
 #menu {
     display: flex;
     justify-content: space-between;
@@ -117,15 +121,21 @@ body {
 }
 
 h1 {
+    text-align: center;
+}
+
+h1 b {
     font-family: NeonDisco;
     font-size: 5rem;
     margin: 0;
+
 }
 
 #b-header {
     background-color: black;
     color: yellow;
-    padding-left: 1rem
+    padding-left: 1rem;
+    border-radius: 5px;
 }
 
 #h2-style {
@@ -141,9 +151,11 @@ h1 {
     margin-left: 2rem;
 }
 
-li b {
+li b,
+p b {
     text-decoration: underline 2px;
 }
+
 
 .wrapper {
     background: rgba(0, 0, 0, 0.6);

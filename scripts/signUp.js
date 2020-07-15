@@ -29,7 +29,7 @@ class Signup {
 
         this.setErrorMessages();
 
-        
+
         this.checkButton();
     }
 
@@ -143,7 +143,7 @@ class Signup {
             this.errorsWrapper.appendChild(errorMessageP);
         })
     }
-    
+
 }
 
 // crear una nueva instanica del Signup (objeto)
