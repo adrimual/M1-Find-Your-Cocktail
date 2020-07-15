@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboardStyle.css">
+    <title>Dashboard 1</title>
+</head>
+
+<body>
+    <header id="myHeader">
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</li></a>
+                <li><a href="index.html">Search by:</a>
+                    <ul>
+                        <li><a id="a1" href="searchByCocktail.html">Cocktail name</li></a>
+                        <li><a id="a2" href="searchBySpirit.html">Spirit</li></a>
+                        <li><a id="a3" href="searchByIngredient.html">Ingredient</li></a>
+                    </ul>
+                </li>
+                <li><a href="index.html">About us</li><a>
+            </ul>
+            <div id="centeredTitle">
+                <h2 id="titleH2">Cocktail searcher</h2>
+                <h1>
+                    <b>
+                        Find your
+                        <br>
+                        Cocktail
+                    </b>
+                </h1>
+            </div>
+            <div id="enter">
+                <a href="logIn.html">Log In</a>
+                <a href="signIn.html">Sign In</a>
+            </div>
+        </nav>
+    </header>
+    <main id="bg-color">
+        <div class="container">
+            <div class="center">
+                <h1 id="browse-title">Browse cocktails
+                    <br>
+                    <br>
+                </h1>
+                <section class="cocktail-by-name">
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/theCocktailDBService.js"></script>
+</body>
+
+</html>

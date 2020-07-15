@@ -1,0 +1,144 @@
+@font-face {
+    font-family: NeonDisco;
+    src: url(/assets/fonts/NeonDisco.ttf);
+}
+
+@font-face {
+    font-family: "Neon Glow";
+    src: url(/assets/fonts/Neon\ Glow.ttf);
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+
+    font-family: "Comfortaa";
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    background-color: white;
+    position: relative;
+    float: left;
+}
+
+#enter {
+    background-color: white;
+    padding-top: 0.3rem;
+}
+
+#menu ul a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 0;
+}
+
+#menu ul ul li {
+    float: none;
+    width: 150px;
+}
+
+#menu ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu #a1:hover,
+#a2:hover,
+#a3:hover {
+    max-width: 85%;
+    width: 100%;
+    height: 2.8rem;
+    background-color: aquamarine;
+    border-radius: 15px
+}
+
+#enter a {
+    color: black;
+    text-decoration: none;
+    padding-right: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+#separation-gap {
+    padding: 1.5rem;
+}
+
+#centeredTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3.3rem;
+    padding-right: 4.8rem;
+}
+
+#titleH2 {
+    padding-top: 4rem;
+    font-size: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 b {
+    font-family: NeonDisco;
+    font-size: 5rem;
+    margin: 0;
+
+}
+
+#bg-color {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 9px;
+}
+
+#browse-title {
+    font-family: "Neon Glow";
+    font-size: 3rem;
+    color: yellow;
+    text-decoration: underline;
+}
