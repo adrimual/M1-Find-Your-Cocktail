@@ -2,40 +2,53 @@
     font-family: NeonDisco;
     src: url(/assets/fonts/NeonDisco.ttf);
 }
+
 @font-face {
     font-family: "Neon Glow";
     src: url(/assets/fonts/Neon\ Glow.ttf);
 }
+
 @font-face {
-    font-family: "Clubbed to Life";
-    src: url(/assets/fonts/Clubbed\ to\ Life.otf);
+    font-family: "Comfortaa";
+    src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
 }
-html{
+
+* {
+    outline: none;
     box-sizing: border-box;
-    font-family: "Clubbed to Life";
 }
+
+html {
+
+    font-family: "Comfortaa";
+}
+
 body {
     margin: 0;
     font-size: 15px;
     line-height: 1.5;
 }
+
 #menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 #menu ul li {
     background-color: white;
     position: relative;
-    float: left;    
+    float: left;
 }
+
 #enter {
     background-color: white;
     padding-top: 0.3rem;
 }
+
 #menu ul a {
     display: block;
-    color:black;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.8rem;
@@ -43,50 +56,63 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-#menu ul ul{
+
+#menu ul ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background:white;
+    background: white;
     padding: 0;
 }
+
 #menu ul ul li {
     float: none;
     width: 150px;
 }
+
 #menu ul ul a {
-    line-height:120%;
-    padding:10px 15px;
+    line-height: 120%;
+    padding: 10px 15px;
 }
-#menu ul li:hover > ul {
-    display:block;
+
+#menu ul li:hover>ul {
+    display: block;
 }
+
 #menu {
     display: flex;
     justify-content: space-between;
 }
-#enter a{
+
+#enter a {
     color: black;
     text-decoration: none;
     padding-right: 1rem;
     font-weight: 700;
     font-size: 1.3rem;
 }
-#centeredTitle{
+
+#separation-gap {
+    padding: 1.5rem;
+}
+
+#centeredTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 3.3rem;
     padding-right: 4.8rem;
 }
+
 #titleH2 {
     padding-top: 4rem;
     font-size: 2rem;
 }
+
 h1 {
     font-family: NeonDisco;
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 0;
 }
 #FYC_Options{
@@ -99,6 +125,7 @@ h1 {
     font-family: "Neon Glow";
     color: #FFFF28;
     background-color: black;
+    font-size: 2rem;
 }
 .displayContainer{
     padding: 0.8rem 1.1rem;
