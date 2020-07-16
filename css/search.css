@@ -201,16 +201,31 @@ p b {
     color: yellow;
     text-decoration: underline;
 }
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #cocktail-by-name {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    max-width: 100%;
+    width: 90%;
 }
-#cocktail-by-name img, h3 {
+
+#cocktail-by-name img,
+h3 {
     width: 250px;
     text-align: center;
     font-family: "Comfortaa";
     font-weight: bolder;
     font-size: 1.2rem;
     color: #ffec00;
+}
+
+.image-container>a {
+    text-decoration: none;
 }

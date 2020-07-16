@@ -20,8 +20,9 @@ const getCocktailByName = () => {
                         if (cocktail.drinks[i].strDrink.toLowerCase().includes(cocktails.value.toLowerCase())) {
                             console.log(cocktail.drinks[i].strDrinkThumb);
                             section.innerHTML = section.innerHTML + `<div class="image-container">
+                            <a href="dashboard1.html?cocktailName=${cocktail.drinks[i].strDrink}">
                     <img src="${cocktail.drinks[i].strDrinkThumb}" alt="${cocktail.drinks[i].strDrink}"/>
-                    <h3>${cocktail.drinks[i].strDrink}</h3></div>`
+                    <h3>${cocktail.drinks[i].strDrink}</h3></a></div>`
                         }
                     }
                     cocktails.value = "";
@@ -36,24 +37,5 @@ const getCocktailByName = () => {
             })
     }
 }
-const getCocktailsByIngredients = () => {
-    var cocktails = document.querySelector("#search-bar").value;
-    console.log(ingredient);
-    var section = document.querySelector("#cocktail-by-ingredient");
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktails}`)
-        .then((response) => {
-            console.log(response);
-            return response.json();
-        })
-        .then((cocktail) => {
 
-            for (let i = 0; i < cocktail.drinks.length; i++) {
-                console.log(cocktail.drinks[i].strDrinkThumb);
-                section.innerHTML = section.innerHTML + `<div class="image-container">
-                <img src="${cocktail.drinks[i].strDrinkThumb}" alt="${cocktail.drinks[i].strDrink}"/>
-                <h3>${cocktail.drinks[i].strDrink}</h3></div>`
-            }
-        })
-        .catch((err) => {})
-}
 searchBtn.addEventListener("click", () => getCocktailByName())
