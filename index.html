@@ -16,7 +16,6 @@
                 <li><a href="index.html">Search by:</a>
                     <ul>
                         <li><a id="a1" href="searchByCocktail.html">Cocktail name</li></a>
-                        <li><a id="a2" href="searchBySpirit.html">Spirit</li></a>
                         <li><a id="a3" href="searchByIngredient.html">Ingredient</li></a>
                     </ul>
                 </li>
@@ -56,15 +55,19 @@
                         <img src="./assets/img/cocktail.png" alt="cocktail"
                             style="max-height: 135px; max-width: 175px;">
                     </a>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id dolore nobis saepe omnis rerum. Vero
-                        iste quos fugiat porro ipsam nemo?
-                        Ea adipisci qui deserunt omnis molestiae, delectus non corporis.
+                    <p>The easiest way to prepare many different types of cocktails has just arrived!
+                        <br>
+                        <br>
+                        Find here how to prepare your favourite cocktail
                     </p>
+                    <br>
                     <form action="searchByCocktail.html">
                         <button type="submit" class="searchBtn">
+                            <span>
                             Find Your Cocktail
                             <br>
                             Here
+                            </span>
                         </button>
                     </form>
                     <br>
@@ -75,22 +78,31 @@
                         <img src="./assets/img/ingredients.png" alt="ingredient"
                             style="max-height: 110px; max-width: 175px;">
                     </a>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id dolore nobis saepe omnis rerum. Vero
-                        iste quos fugiat porro ipsam nemo?
-                        Ea adipisci qui deserunt omnis molestiae, delectus non corporis.
+                    <p>Would you like to discover what kind of cocktails can you do with a specific
+                        ingredient?
+                        <br>
+                        <br>
+                        Find out all possible combinations with a specific ingredient here!
+                        <br>
                     </p>
                     <form action="searchByIngredient.html">
                         <button type="submit" class="searchBtn">
-                            Search an Ingredient
+                           <span>Search an Ingredient
                             <br>
                             Here
+                            </span>
                         </button>
                     </form>
                     <br>
                 </div>
             </div>
             <div class="searchBtn" id="randomCocktailContainer">
-                <button class="searchBtn" type="submit">Generate a Random <br> Cocktail</button>
+                
+                <button class="searchBtn" type="submit">
+                    <span>Generate a Random <br> Cocktail
+                    </span>
+                </button>
+                
             </div>
         </div>
     </section>
@@ -101,7 +113,9 @@
                 <a class="goTopBtn" href="index.html">
                     <span class="buttonStyle">
                         <button type="submit">
-                            Go back home
+                            <span>
+                                Go back home
+                            </span>
                         </button>
                     </span>
                 </a>
@@ -124,6 +138,7 @@
             </div>
         </footer>
     </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

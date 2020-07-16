@@ -1,0 +1,1 @@
+const randomCocktail = document.querySelector

@@ -1,7 +1,6 @@
 'use strict';
-
 var searchBtn = document.querySelector(".search-btn");
-
+var linkUrl = document.querySelector(".linkUrl");
 const getCocktailByName = () => {
     var cocktails = document.querySelector("#search-bar");
     console.log(cocktails);
@@ -20,7 +19,7 @@ const getCocktailByName = () => {
                         if (cocktail.drinks[i].strDrink.toLowerCase().includes(cocktails.value.toLowerCase())) {
                             console.log(cocktail.drinks[i].strDrinkThumb);
                             section.innerHTML = section.innerHTML + `<div class="image-container">
-                            <a href="dashboard1.html?cocktailName=${cocktail.drinks[i].strDrink}">
+                            <a class="linkUrl" href="dashboard1.html?cocktailName=${cocktail.drinks[i].strDrink}">
                     <img src="${cocktail.drinks[i].strDrinkThumb}" alt="${cocktail.drinks[i].strDrink}"/>
                     <h3>${cocktail.drinks[i].strDrink}</h3></a></div>`
                         }
@@ -38,4 +37,7 @@ const getCocktailByName = () => {
     }
 }
 
-searchBtn.addEventListener("click", () => getCocktailByName())
+searchBtn.addEventListener("click", () => getCocktailByName());
+// window.onload = function () {
+//     document.getElementByClassName('linkUrl').addEventListener('click', displayResult, false);
+// }
