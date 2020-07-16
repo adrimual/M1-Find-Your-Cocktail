@@ -1,1 +1,4 @@
-const randomCocktail = document.querySelector
+const randomCocktail = document.querySelector(".randomCocktailBtn");
+const generateRandomCocktail = () => {
+
+}

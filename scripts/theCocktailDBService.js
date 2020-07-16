@@ -27,7 +27,7 @@ const getCocktailByName = () => {
                     cocktails.value = "";
                 } else {
                     const errorP = document.createElement("p");
-                    errorP.innerHTML = "Not results found";
+                    errorP.innerHTML = '<span style="color:yellow;">Not results found</span>';
                     section.appendChild(errorP);
                 }
             })

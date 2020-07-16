@@ -12,7 +12,10 @@
     font-family: "Comfortaa";
     src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
 }
-
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 * {
     outline: none;
     box-sizing: border-box;
@@ -190,7 +193,7 @@ body {
 
 .displayContainer {
     padding: 0.8rem 1.5rem;
-    color: yellowgreen;
+    color: white;
     font-weight: bolder;
     line-height: 2;
     font-size: 1.2rem;
@@ -217,7 +220,7 @@ h3 {
 .searchBy {
     padding-top: 1rem;
     width: 33.33333%;
-    color: greenyellow;
+    color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -277,4 +280,28 @@ h3 {
 #randomCocktailContainer {
     margin-top: 5rem;
 
+}
+.footerContainer {
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+}
+.bottomSection {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+}
+
+.goTopBtnContainer{
+    align-self: flex-start;
+    padding: 1rem;
+}
+
+.socialMedia {
+    background-color: rgba(0, 0, 0, 0.7);
 }

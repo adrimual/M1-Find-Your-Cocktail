@@ -176,21 +176,26 @@ body {
 #b-header {
     background-color: black;
     color: yellow;
-    padding-left: 1rem;
-    border-radius: 5px;
+    padding: 0.1rem;
+    border-radius: 15px;
 }
 
 #h2-style {
     font-family: Neon Glow;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 #a-container {
     font-size: 1.3rem;
+    line-height: 3;
 }
-
+#b-container {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 #b-container p {
     margin-left: 2rem;
+    color: white;
+    font-size: 1.1rem;
 }
 
 li b,
@@ -200,7 +205,7 @@ p b {
 
 .ulContainer {
     background-color: rgba(0, 0, 0, 0.6);
-    color: yellowgreen
+    color: white;
 }
 
 .wrapper {
@@ -248,6 +253,12 @@ p b {
     color: yellow;
     text-decoration: underline;
 }
+@media screen and (max-width: 768px) {
+    #browse-title{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+}
 
 .center {
     display: flex;
@@ -275,4 +286,70 @@ h3 {
 
 .image-container>a {
     text-decoration: none;
+}
+.footerContainer {
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+}
+.searchBtn {
+    position: relative;
+    padding: 0.2rem;
+    background: linear-gradient(to right, #BE00FE, #DF00FE);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.searchBtn::before,
+.searchBtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #BE00FE, #DF00FE);
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.searchBtn:hover::before {
+    filter: blur(10px);
+}
+
+.searchBtn:hover::before {
+    filter: blur(20px);
+}
+
+.searchBtn span {
+    position: relative;
+    z-index: 3;
+    display: block;
+    padding: 1.2rem;
+    font-family: Comfortaa;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 17px;
+}
+.bottomSection {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+}
+
+.goTopBtnContainer{
+    align-self: flex-start;
+    padding: 1rem;
+}
+
+.socialMedia {
+    background-color: rgba(0, 0, 0, 0.7);
 }

@@ -172,6 +172,7 @@ body {
     background-image: url(/assets/img/black-wall.png);
     background-size: auto 100%;
 }
+
 #b-header {
     background-color: black;
     color: yellow;
@@ -196,16 +197,19 @@ body {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 9px;
 }
+
 #cocktail-by-name {
     display: flex;
     justify-content: flex-start;
 }
+
 #browse-title {
     font-family: "Neon Glow";
     font-size: 3rem;
     color: yellow;
     text-decoration: underline;
 }
+
 .bg-color {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 9px;
@@ -243,4 +247,18 @@ h3 {
 
 .image-container>a {
     text-decoration: none;
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }

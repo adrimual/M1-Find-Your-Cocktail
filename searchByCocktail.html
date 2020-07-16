@@ -43,15 +43,16 @@
     </header>
     <div id="a-container">
         <div class="ulContainer">
-        <ul>
-            <li>Enter your desired cocktail into the textbox below</li>
             <ul>
-                <li>Tip: Start only with one search term</li>
-                <li>Tip: Search words found in the <b>name</b> of your desired cocktail</li>
+                <li>Enter your desired cocktail into the textbox below</li>
+                <ul>
+                    <li>Tip: Start only with one search term</li>
+                    <li>Tip: Search words found in the <b>name</b> of your desired cocktail</li>
+                </ul>
+                <li>Click the yellow button to see the cocktail/s beneath and click the one you desire</li>
             </ul>
-            <li>Click the yellow button to proceed</li>
-        </ul>
         </div>
+        
         <div class="wrapper">
             <input id="search-bar" type="text" placeholder="Search here..." name="cocktailSearch">
             <div class="search-btn">
@@ -77,14 +78,16 @@
         <br>
         <br>
     </div>
-
+    <br>
     <div class=footerContainer>
         <footer class="bottomSection">
             <div class=goTopBtnContainer>
                 <a class="goTopBtn" href="index.html">
                     <span class="buttonStyle">
-                        <button type="submit">
-                            Go back home
+                        <button class="searchBtn" type="submit">
+                            <span>
+                                Go back home
+                            </span>
                         </button>
                     </span>
                 </a>
@@ -106,8 +109,7 @@
                 </p>
             </div>
         </footer>
-    </div>
-    <script src="./scripts/theCocktailDBService.js"></script>
+        <script src="./scripts/theCocktailDBService.js"></script>
 </body>
 
 </html>
