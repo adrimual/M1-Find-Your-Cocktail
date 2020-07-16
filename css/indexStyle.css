@@ -16,17 +16,19 @@
 * {
     outline: none;
     box-sizing: border-box;
+
 }
 
 html {
-
     font-family: "Comfortaa";
+
 }
 
 body {
     margin: 0;
     font-size: 15px;
     line-height: 1.5;
+    background-image: url("../assets/img/dark-bg.png");
 }
 
 #menu ul {
@@ -118,6 +120,8 @@ body {
 #titleH2 {
     padding-top: 4rem;
     font-size: 2rem;
+    font-weight: bolder;
+    color: yellow
 }
 
 h1 {
@@ -128,7 +132,6 @@ h1 b {
     font-family: NeonDisco;
     font-size: 5rem;
     margin: 0;
-
 }
 
 #FYC_Options {
@@ -148,6 +151,10 @@ h1 b {
 
 .displayContainer {
     padding: 0.8rem 1.1rem;
+    color: yellowgreen;
+    font-weight: bolder;
+    line-height: 2;
+    font-size: 1.2rem;
 }
 
 #linkContainer {

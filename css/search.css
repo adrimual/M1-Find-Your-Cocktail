@@ -201,3 +201,16 @@ p b {
     color: yellow;
     text-decoration: underline;
 }
+#cocktail-by-name {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#cocktail-by-name img, h3 {
+    width: 250px;
+    text-align: center;
+    font-family: "Comfortaa";
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: #ffec00;
+}
