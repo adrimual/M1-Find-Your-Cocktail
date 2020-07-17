@@ -1,16 +1,16 @@
 @font-face {
     font-family: NeonDisco;
-    src: url(/assets/fonts/NeonDisco.ttf);
+    src: url(./../assets/fonts/NeonDisco.ttf);
 }
 
 @font-face {
     font-family: "Neon Glow";
-    src: url(/assets/fonts/Neon\ Glow.ttf);
+    src: url(./../assets/fonts/Neon\ Glow.ttf);
 }
 
 @font-face {
     font-family: "Comfortaa";
-    src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
+    src: url(./../assets/fonts/Comfortaa-VariableFont_wght.ttf);
 }
 
 * {

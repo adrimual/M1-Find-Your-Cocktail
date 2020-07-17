@@ -1,16 +1,16 @@
 @font-face {
     font-family: NeonDisco;
-    src: url(/assets/fonts/NeonDisco.ttf);
+    src: url(./../assets/fonts/NeonDisco.ttf);
 }
 
 @font-face {
     font-family: "Neon Glow";
-    src: url(/assets/fonts/Neon\ Glow.ttf);
+    src: url(./../assets/fonts/Neon\ Glow.ttf);
 }
 
 @font-face {
     font-family: "Comfortaa";
-    src: url(/assets/fonts/Comfortaa-VariableFont_wght.ttf);
+    src: url(./../assets/fonts/Comfortaa-VariableFont_wght.ttf);
 }
 
 * {
@@ -189,9 +189,11 @@ body {
     font-size: 1.3rem;
     line-height: 3;
 }
+
 #b-container {
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 #b-container p {
     margin-left: 2rem;
     color: white;
@@ -253,8 +255,9 @@ p b {
     color: yellow;
     text-decoration: underline;
 }
+
 @media screen and (max-width: 768px) {
-    #browse-title{
+    #browse-title {
         font-size: 2.3rem;
         text-align: center;
     }
@@ -287,6 +290,7 @@ h3 {
 .image-container>a {
     text-decoration: none;
 }
+
 .footerContainer {
     padding-top: 3rem;
     display: flex;
@@ -297,6 +301,7 @@ h3 {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 25px;
 }
+
 .searchBtn {
     position: relative;
     padding: 0.2rem;
@@ -339,13 +344,14 @@ h3 {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 17px;
 }
+
 .bottomSection {
     display: flex;
     width: 300px;
     justify-content: center;
 }
 
-.goTopBtnContainer{
+.goTopBtnContainer {
     align-self: flex-start;
     padding: 1rem;
 }
