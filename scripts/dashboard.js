@@ -10,12 +10,14 @@ const displayResult = (cocktailName) => {
         })
         .then((cocktail) => {
             if (cocktail.drinks) {
-                var ingredients = [cocktail.drinks[0].strIngredient1, cocktail.drinks[0].strIngredient2, cocktail.drinks[0].strIngredient3,
-                    cocktail.drinks[0].strIngredient4, cocktail.drinks[0].strIngredient5, cocktail.drinks[0].strIngredient6,
-                    cocktail.drinks[0].strIngredient7, cocktail.drinks[0].strIngredient8, cocktail.drinks[0].strIngredient9,
-                    cocktail.drinks[0].strIngredient10, cocktail.drinks[0].strIngredient11, cocktail.drinks[0].strIngredient12,
-                    cocktail.drinks[0].strIngredient13, cocktail.drinks[0].strIngredient14, cocktail.drinks[0].strIngredient15
-                ];
+                var ingredients = [];
+                for (let i = 0; i < 15; i++) {
+                    let currentIngredient = cocktail.drinks[0][`strIngredient${i}`];
+                    if (currentIngredient) {
+                        ingredients.push(currentIngredient);
+                    }
+                }
+                console.log('ingredients :>> ', ingredients);
                 console.log(ingredients);
                 cocktailElement.innerHTML = `
                                 <h3>${cocktail.drinks[0].strDrink}</h3>
